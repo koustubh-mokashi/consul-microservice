@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: sample-service1
+  cloud:
+    consul:
+      discovery:
+        instanceId: ${spring.application.name}:${random.value}
+        healthCheckPath: /health
